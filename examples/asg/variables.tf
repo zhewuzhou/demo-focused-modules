@@ -1,6 +1,6 @@
 
 variable "cluster_name" {
-  description = "The name of the auto scaling group"
+  description = "name of asg"
   type        = string
-  default     = "demo-focused-modules"
+  default     = "demo-focused-modules-asg"
 }
