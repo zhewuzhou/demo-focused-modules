@@ -7,6 +7,14 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  backend "s3" {
+    bucket         = "demo_focused_module_terraform_state_table_bucket_name"
+    key            = "demo/dev/terraform.tfstate"
+    region         = "ap-southeast-2"
+    dynamodb_table = "demo_focused_module_terraform_state_dev_table"
+    encrypt        = true
+  }
 }
 
 provider "aws" {

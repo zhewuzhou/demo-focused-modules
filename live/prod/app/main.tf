@@ -8,6 +8,13 @@ terraform {
     }
   }
 
+  backend "s3" {
+    bucket         = "demo_focused_module_terraform_state_table_bucket_name"
+    key            = "demo/prod/terraform.tfstate"
+    region         = "ap-southeast-2"
+    dynamodb_table = "demo_focused_module_terraform_state_prod_table"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
