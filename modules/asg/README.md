@@ -1,1 +1,1 @@
-# Auto Scaling Group with Rolling Deploy 
+# auto scaling group with rolling update and scale out/in policies
